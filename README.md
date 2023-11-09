@@ -18,6 +18,7 @@ For listing your subdomain(s), click on [this link](https://github.com/lgbt-sh/l
 
 To get info about your subdomain(s), click on [this link](https://github.com/lgbt-sh/lgbt-sh/issues/new?template=get.yml&title=Get%20Info) to open a form for getting information on a domain.
 
+#### To report any sort of abuse of this service, please reach out to abuse@lgbt.sh
 ##### Credits to the [is-probably.gay](https://github.com/is-probably-gay/is-probably-gay) project for making this possible!
 
 * * *
