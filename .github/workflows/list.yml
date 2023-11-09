@@ -27,6 +27,6 @@ jobs:
             cat data.csv
             comment=$(cut -d "|" -f 2 data.csv)
             reason=$(cut -d "|" -f 1 data.csv)
-            gh issue edit https://github.com/lgbt-sh/lgbt-sh/issues/${{ github.event.issue.number }} -t "🌈 List $EVENT_USER_LOGIN" --add-label "domain list"
+            gh issue edit https://github.com/lgbt-sh/lgbt-sh/issues/${{ github.event.issue.number }} -t "🏳️‍⚧️🏳️‍🌈 List $EVENT_USER_LOGIN" --add-label "domain list"
             gh issue close https://github.com/lgbt-sh/lgbt-sh/issues/${{ github.event.issue.number }} --comment "${comment//"\\n"/$'\n'}" --reason "$reason"
 
