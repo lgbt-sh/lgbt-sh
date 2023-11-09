@@ -36,7 +36,7 @@ if (type == "invalid") {
     "not planned|The record destination you entered is invalid!|"+array[1][1]
   )
 }
-cf.dnsRecords.browse("54c7b733aa82d85bcf1e7cf752096f54").then((records) => {
+cf.dnsRecords.browse("6f122d28e700b9f3ec930007e1ccb1b1").then((records) => {
   const availabilityFilter = records.result.filter((record) => {
     return record.name == array[1][1]
   })

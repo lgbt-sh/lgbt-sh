@@ -36,7 +36,7 @@ var flare = require("cloudflare")
 var cf = flare({
   token: process.env.CF_TOKEN,
 })
-cf.dnsRecords.browse("54c7b733aa82d85bcf1e7cf752096f54").then((records) => {
+cf.dnsRecords.browse("6f122d28e700b9f3ec930007e1ccb1b1").then((records) => {
   const availabilityFilter = records.result.filter((record) => {
     return (
       record.name == array[1][1] &&
@@ -45,7 +45,7 @@ cf.dnsRecords.browse("54c7b733aa82d85bcf1e7cf752096f54").then((records) => {
   })
   if (availabilityFilter[0]) {
     cf.dnsRecords
-      .del("54c7b733aa82d85bcf1e7cf752096f54", availabilityFilter[0].id)
+      .del("6f122d28e700b9f3ec930007e1ccb1b1", availabilityFilter[0].id)
       .then((response) => {
         if (!response.success) {
           return console.log(
