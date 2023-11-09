@@ -1,0 +1,14 @@
+name: List
+description: List Your Subdomains
+title: "List"
+labels: []
+projects: []
+assignees: []
+body:
+- type: checkboxes
+  attributes:
+    label: Check this to continue
+    description: Because GitHub says a form need to include a non-markdown field, you need to check this checkbox, sorry.
+    options:
+      - label: Check this checkbox
+        required: true
