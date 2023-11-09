@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="refresh" content="5;url=https://github.com/lgbt-sh/lgbt-sh/" />
+    <title>Maintenance</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: "MS Gothic", "Osaka", sans-serif;
+            background-color: #F8F8F8;
+            color: #333;
+        }
 
+        /* Maintenance message */
+        .message {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 10%;
+        }
+        /* 90s style animation */
+        .bounce {
+            animation: bounce 1s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        #footer {
+            position: absolute;
+             bottom: 0;
+            left: 0;
+            font-size: 18px;
+            font-family: "MS Gothic";
+            color: #5c2e5c;
+            text-shadow: 0px 0px 10px #1f0e1f;
+            padding: 10px;
+}
+
+    </style>
+    <script>
+        window.onload = function() {
+            // Get the maintenance message element
+            var message = document.querySelector(".message");
+            // Add the bounce class to the element
+            message.classList.add("bounce");
+        }
+    </script>
+</head>
+<body>
+    <div class="message">Register your free <a href="https://github.com/lgbt-sh/lgbt-sh/">LGBT.SH</a> subdomain today!</div><br/><br/>
+	<center>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/LGBTQ%2B_rainbow_flag_Quasar_%22Progress%22_variant.svg" align="center" width="512"/>
+	</center
+</body>
+<div id="footer">
+    <p>To report abuse of this service, reach out to <a href="mailto:abuse@lgbt.sh" style="text-decoration:none;">abuse@lgbt.sh</a>！</p>
+  </div>
+  
+  
+</html>
