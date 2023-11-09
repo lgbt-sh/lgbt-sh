@@ -1,4 +1,4 @@
-name: "Register Subdomain"
+name: "Delete Subdomain"
 
 on:
   issues:
@@ -7,7 +7,7 @@ on:
 jobs:
   Register:
     runs-on: ubuntu-latest
-    if: github.event.issue.title == 'Register'
+    if: github.event.issue.title == 'Delete'
     permissions:
       issues: write
     steps:
@@ -15,7 +15,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2.3.1
       
-    - name: Register Subdomain
+    - name: Delete Subdomain
       env:
         EVENT_ISSUE_BODY: ${{ github.event.issue.body }}
         EVENT_USER_LOGIN: ${{ github.event.issue.user.login }}
@@ -23,12 +23,12 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
             npm i cloudflare
-            node --no-deprecation register > data.csv
+            node --no-deprecation delete > data.csv
             cat data.csv
             comment=$(cut -d "|" -f 2 data.csv)
             reason=$(cut -d "|" -f 1 data.csv)
             domain=$(cut -d "|" -f 3 data.csv)
-            gh issue edit https://github.com/is-probably-gay/is-probably-gay/issues/${{ github.event.issue.number }} -t "🌈 Register $domain" --add-label "domain register"
+            gh issue edit https://github.com/is-probably-gay/is-probably-gay/issues/${{ github.event.issue.number }} -t "🌈 Delete $domain" --add-label "domain delete"
             if [ "$reason" = "completed" ]
               then
                 gh issue edit https://github.com/is-probably-gay/is-probably-gay/issues/${{ github.event.issue.number }} --add-label "success"
@@ -36,3 +36,4 @@ jobs:
                 gh issue edit https://github.com/is-probably-gay/is-probably-gay/issues/${{ github.event.issue.number }} --add-label "failed"
             fi
             gh issue close https://github.com/is-probably-gay/is-probably-gay/issues/${{ github.event.issue.number }} --comment "$comment" --reason "$reason"
+
