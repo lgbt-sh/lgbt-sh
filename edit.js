@@ -23,8 +23,8 @@ if (
     !array[2][1].includes(" ") &&
     !nonascii.test(array[1][1]) &&
     !nonascii.test(array[2][1]) &&
-    array[1][1] != ".is-probably.gay" &&
-    array[1][1].endsWith(".is-probably.gay")
+    array[1][1] != ".lgbt.sh" &&
+    array[1][1].endsWith(".lgbt.sj")
   )
 ) {
   return console.log(
