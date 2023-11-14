@@ -25,8 +25,8 @@ if (
     !array[2][1].includes(" ") &&
     !nonascii.test(array[1][1]) &&
     !nonascii.test(array[2][1]) &&
-    array[1][1] != ".lgbt.sh" &&
-    array[1][1].endsWith(".lgbt.sh")
+    array[1][1] != ".wip.lgbt.sh" &&
+    array[1][1].endsWith(".wip.lgbt.sh")
   )
 ) {
   return console.log(
