@@ -13,15 +13,6 @@ const cf = flare({
 })
 
 
-function logErrorAndExit(message, subdomain) {
-  console.log(`not planned|${message}|${subdomain}`);
-}
-
-function logSuccess(subdomain) {
-  console.log(`completed|Your subdomain has been successfully edited!|${subdomain}`);
-}
-
-
 // dark magic starts here, dont ask.
 array.forEach((item, index) => {
   array[index] = item.split("\n\n")
