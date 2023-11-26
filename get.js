@@ -11,8 +11,8 @@ if (
     array[1][0] == "Subdomain Name" &&
     !array[1][1].includes(" ") &&
     !nonascii.test(array[1][1]) &&
-    array[1][1] != ".wip.lgbt.sh" &&
-    array[1][1].endsWith(".wip.lgbt.sh")
+    array[1][1] != ".lgbt.sh" &&
+    array[1][1].endsWith(".lgbt.sh")
   )
 )
   return console.log("not planned|The domain you entered is invalid!|"+array[1][1])
