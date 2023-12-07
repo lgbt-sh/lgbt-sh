@@ -38,8 +38,8 @@ if (
     !array[2][1].includes(" ") &&
     !nonascii.test(subdomain) &&
     !nonascii.test(array[2][1]) &&
-    array[1][1] !== ".wip.lgbt.sh" &&
-    array[1][1].endsWith(".wip.lgbt.sh")
+    array[1][1] !== ".lgbt.sh" &&
+    array[1][1].endsWith(".lgbt.sh")
   )
 ) {
   return logErrorAndExit("Format invalid! It's usually because you didn't check the agreements, or the domain/record you entered is invalid!", subdomain)
