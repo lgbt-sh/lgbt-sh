@@ -1,21 +1,25 @@
-var flare = require("cloudflare")
-var cf = flare({
-  token: process.env.CF_TOKEN,
+const flare = require("cloudflare")
+const cf = flare({
+    token: process.env.CF_TOKEN,
 })
-cf.dnsRecords.browse("6f122d28e700b9f3ec930007e1ccb1b1").then((records) => {
-  const availabilityFilter = records.result.filter((record) => {
-    return record.comment == process.env.EVENT_USER_LOGIN
-  })
-  if (availabilityFilter[0]) {
-    const mappedRecords = availabilityFilter.map((record) => {
-      return record.name
+const { logSuccess } = require('utils.js');
+
+
+
+cf.dnsRecords.browse(DNS_ZONE_ID).then((records) => {
+
+    const availabilityFilter = records.result.filter((record) => {
+        return record.comment === process.env.EVENT_USER_LOGIN
     })
-    return console.log(
-      `completed|Your subdomains:\\n${mappedRecords.join("\\n")}`
-    )
-  } else {
-    return console.log(
-      "completed|You don't have any subdomains!"
-    )
-  }
+
+    if (availabilityFilter[0]) {
+        const mappedRecords = availabilityFilter.map((record) => {
+            return record.name
+        })
+
+        return logSuccess(`Your Subdomains:\\n${mappedRecords.join("\\n")}`)
+
+    }
+
+    return logSuccess('No Subdomains.')
 })

@@ -7,6 +7,10 @@ const ipv6 =
     /^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/gm
 const hostname =
     /^\s*(?:(?!-)[A-Za-z0-9-]{1,63}(?<!-)\\.)+[A-Za-z]{2,63}\s*$/gm
+const nonascii = /[^\u0000-\u007F]+/
+
+// Magic DNS Number.
+const DNS_ZONE_ID = "6f122d28e700b9f3ec930007e1ccb1b1";
 
 
 // Encapsulated methods for testing the REGEX, improves readability.
@@ -46,6 +50,9 @@ function logErrorAndExit(message, subdomain) {
     console.log(`not planned|${message}|${subdomain}`);
 }
 
-function logSuccess(subdomain) {
-    console.log(`completed|Your subdomain has been successfully edited!|${subdomain}`);
+function logSuccess(message, subdomain = "no Subdomains") {
+    console.log(`completed|${message}|${subdomain}`);
 }
+
+
+module.exports = {getValidRecordType, logErrorAndExit, logSuccess, isValidCNAME, isValidIPv4, isValidIPv6, ipv4, ipv6, hostname, DNS_ZONE_ID, nonascii}
