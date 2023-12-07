@@ -2,7 +2,7 @@ const flare = require("cloudflare")
 const cf = flare({
     token: process.env.CF_TOKEN,
 })
-const { logSuccess } = require('utils.js');
+const { logSuccess } = require('./utils.js');
 
 
 
