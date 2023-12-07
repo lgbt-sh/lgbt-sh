@@ -1,0 +1,7 @@
+{
+  "name": "lgbt-sh-dev",
+  "version": "1.0.0",
+  "dependencies": {
+    "cloudflare": "^2.9.1"
+  }
+}
