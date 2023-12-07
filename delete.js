@@ -24,8 +24,8 @@ if (
     array[3][2] == undefined &&
     !array[1][1].includes(" ") &&
     !nonascii.test(array[1][1]) &&
-    array[1][1] != ".wip.lgbt.sh" &&
-    array[1][1].endsWith(".wip.lgbt.sh")
+    array[1][1] != ".lgbt.sh" &&
+    array[1][1].endsWith(".lgbt.sh")
   )
 ) {
   return console.log(
