@@ -1,6 +1,6 @@
 const array = process.env.EVENT_ISSUE_BODY.split("### ")
 const flare = require("cloudflare")
-const { logSuccess, getValidRecordType,logErrorAndExit, DNS_ZONE_ID, nonascii } = require('utils');
+const { logSuccess, getValidRecordType,logErrorAndExit, DNS_ZONE_ID, nonascii } = require('./utils');
 
 /**
  * CONSTANTS
