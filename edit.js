@@ -32,7 +32,7 @@ if (
     array[2].length === 3 &&
     array[3].length === 3 &&
     array[3][0] === "Agreement" &&
-    array[3][1] === "- [X] I have ensured that this subdomain is mine" &&
+    array[3][1] === "- [x] I have ensured that this subdomain is mine" &&
     array[3][2] === undefined &&
     !subdomain.includes(" ") &&
     !array[2][1].includes(" ") &&

@@ -16,7 +16,7 @@ if (
     array[1].length == 3 &&
     array[2].length == 3 &&
     array[2][0] == "Agreement" &&
-    array[2][1] == "- [X] I have ensured that this subdomain is mine" &&
+    array[2][1] == "- [x] I have ensured that this subdomain is mine" &&
     array[2][2] == "" &&
     array[3].length == 3 &&
     array[3][0] == "Type your domain name + DELETE to confirm" &&
