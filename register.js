@@ -18,9 +18,9 @@ if (
     array[3].length == 3 &&
     array[3][0] == "Agreement" &&
     array[3][1] ==
-      "- [X] I have ensured that no one registered this subdomain" &&
+      "- [x] I have ensured that no one registered this subdomain" &&
     array[3][2] ==
-      "- [X] I have ensured that I did not reach the five subdomain limit" &&
+      "- [x] I have ensured that I did not reach the five subdomain limit" &&
     !array[1][1].includes(" ") &&
     !array[2][1].includes(" ") &&
     !nonascii.test(array[1][1]) &&
